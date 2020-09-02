@@ -1,0 +1,15 @@
+#myListView .list-cell {
+	-fx-text-fill: #ff30e1;
+}
+
+#myListView .list-cell:filled:selected:focused, #myListView .list-cell:filled:selected {
+    -fx-text-fill: white;
+}
+
+#myListView2 .list-cell {
+	-fx-text-fill: #3a76bd;
+}
+
+#myListView2 .list-cell:filled:selected:focused, #myListView .list-cell:filled:selected {
+    -fx-text-fill: white;
+}
