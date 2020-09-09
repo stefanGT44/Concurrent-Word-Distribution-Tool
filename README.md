@@ -21,12 +21,14 @@ Components follow the <b>MVC</b> design pattern.<br>
 ![Alt text](images/de4.png?raw=true "")<br><br>
 Input 0 is linked to Cruncher 0 which is automatically linked to the default output component.<br>
 Input 0 is active and currently reading one text file (see the blue label).<br>
-Cruncher 0 is currently computing the distribution in three files that Input 0 provided.<br>
-Cruncher progress can also be monitored in the output component, if an item in the file list has * before its name, then results for that file are still not ready (cruncher still working on them). <br><br><br>
+Cruncher 0 is currently computing the distribution in three files that Input 0 has provided.<br>
+Cruncher progress can also be monitored in the output component, if an item in the list has a prefix, then results for that file are not ready yet (cruncher still working).
+<br><br><br><br>
 
 ![Alt text](images/de5.png?raw=true "")<br><br>
 In this image the Input and Cruncher components have finished their work from the previous image.<br>
 The output component is showing the distribution of words in the file wiki-7.txt.<br>
-It is also currently computing the sum distribution that the user specified.<br><br><br>
+It is also currently computing the sum distribution that the user specified.<br><br><br><br>
 
-![Alt text](images/de6.png?raw=true "")<br>
+![Alt text](images/de6.png?raw=true "")<br><br>
+In this example the output component is computing the specified distribution sum and is waiting for the final file results to become available to finish.
