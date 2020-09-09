@@ -13,4 +13,4 @@ The user can make multiple instances of each component and link them in a way he
 Input components provide input to the cruncher component, which then provides input to the output component.<br>
 The architecture of the system makes it easy to integrate new types of components.<br>
 
-![Alt text](images/image.png?raw=true "")<br>
+![Alt text](images/wdt.png?raw=true "")<br>
