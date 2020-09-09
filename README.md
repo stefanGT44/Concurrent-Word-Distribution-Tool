@@ -1,6 +1,5 @@
 # Concurrent-Word-Distribution-Tool
-A JavaFX desktop application for concurrently computing the distribution of specified words in large directories/files and plotting the results on a graph.<br>
-Distribution in this case is the count of each word in a text file.
+A JavaFX desktop application for concurrently computing the distribution of specified words in large directories/files and plotting the results on a graph. (Distribution - the count of each word in a text file)
 
 ## Overview
 The system functions as a pipeline that consists of several types of components working concurrently in conjunction.<br>
