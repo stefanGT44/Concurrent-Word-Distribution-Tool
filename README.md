@@ -47,6 +47,6 @@ Input components are tied to a disk (drive) that the user specifies when creatin
 Only directories on the specified disk can be scanned, and only one reading task can be active in the thread pool per disk. <br>
 After one scan cycle is finished, the component pauses for a specified duration (config file). <br>
 The user can manualy pause and resume input components. <br>
-The last modified value of scanned directories is tracked, so if a directory has been modified, it is scanned again (the files are read again). <br>
+The last modified value of scanned directories is tracked, so if a directory has been modified, it is scanned again (the text files are read again). <br>
 
 ### Cruncher components:
