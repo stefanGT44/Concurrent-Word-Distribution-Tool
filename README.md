@@ -39,14 +39,19 @@ Every component instance runs in its own thread and every component type has a d
 Components communicate among each other using blocking queues. Every component has a blocking queue that its predecessors can write to.<br>
 
 ### Input components:
-Every input component can be linked to one or more cruncher component.<br>
-Input components "produce" objects for cruncher's blocking queues, and crunchers "consume" them.<br>
+Every input component can be linked to one or more cruncher components.<br>
+Every input component "produces" objects (read text) that one or more linked cruncher components "consumes".<br>
 The main objective of input components is to scan directories for text files, read them and supply crunchers with them.<br>
 Reading of text files is done in a separate task within the input thread pool.<br>
 Input components are tied to a disk (drive) that the user specifies when creating a new instance. <br>
 Only directories on the specified disk can be scanned, and only one reading task can be active in the thread pool per disk. <br>
-After one scan cycle is finished, the component pauses for a specified duration (config file). <br>
+After one scan cycle is finished, the component pauses for a certain duration before the next cycle (specified in the config file). <br>
 The user can manualy pause and resume input components. <br>
 The last modified value of scanned directories is tracked, so if a directory has been modified, it is scanned again (the text files are read again). <br>
 
 ### Cruncher components:
+Every cruncher component "consumes" objects that one or more input components "produced".<br>
+Every cruncher component "produces" objects that one or more linked output components "consume". <br>
+Every cunrhcer instance has a specified arity number.<br>
+If arity = <b>1</b> the cruncher counts the number of times every <b>single</b> word appears in a text,<br>
+if arity = 3 the cruncher counts the number of times every 3 consecutive words, in exactly that order, appear in a text , etc.<br>
