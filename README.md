@@ -19,7 +19,14 @@ Components follow the <b>MVC</b> design pattern.<br>
 ## Usage example
 
 ![Alt text](images/de4.png?raw=true "")<br>
-
+Input 0 is linked to Counter 0 and the counter is automatically linked to the default output component.<br>
+Input 0 is active and reading one text file currently (see blue label).<br>
+Cruncher 0 is currently computing the distribution in three files that Input 0 provided.<br>
+Cruncher progress can also be monitored in the output component, if an item in the file list has * before its name, then results for that file are still not ready (cruncher still working on it). <br><br>
 
 ![Alt text](images/de5.png?raw=true "")<br>
+In this image the Input and Cruncher components have finished their work from the previous image.<br>
+The output component is showing the distribution of words in the file wiki-7.txt.<br>
+It is also currently computing the sum distribution that the user specified.<br><br>
+
 ![Alt text](images/de6.png?raw=true "")<br>
