@@ -18,11 +18,8 @@ Components follow the <b>MVC</b> design pattern.<br>
 
 ## Usage example
 
-![Alt text](images/de2.png?raw=true "")<br>
-Input 0 is linked to Cruncher 0 and Cruncher 1. Input 0 is started and currently idle (job of reading files is done).
-Input 1 is linked to Cruncher 2. Input 1 is not started yet.
-Cruncher 0 is currently working on 3 text files, and Cruncher 1 on one.
-Cruncher progress can also be viewed in the Output component, in the item list if an item has * as a prefix, the results are not available yet (cruncher still working).
-Currently 2 files are done, and 4 are being worked on.
-*
-![Alt text](images/de3.png?raw=true "")<br>
+![Alt text](images/de4.png?raw=true "")<br>
+
+
+![Alt text](images/de5.png?raw=true "")<br>
+![Alt text](images/de6.png?raw=true "")<br>
