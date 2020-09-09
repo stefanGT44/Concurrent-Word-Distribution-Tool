@@ -11,4 +11,6 @@ There are three types of components:
 Every component runs in its own thread and has a dedicated <b>thread pool.</b><br>
 The user can make multiple instances of each component and link them in a way he sees fit.<br>
 Input components provide input to the cruncher component, which then provides input to the output component.<br>
-The architecture of the system makes it easy to integrate new types of components.
+The architecture of the system makes it easy to integrate new types of components.<br>
+
+![Alt text](images/image.png?raw=true "")<br>
