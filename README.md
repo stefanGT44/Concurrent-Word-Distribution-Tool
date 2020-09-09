@@ -8,11 +8,12 @@ There are three types of components:
 2. Cruncher component - data processing
 3. Output component - storing and visualizing results
 
-Every component runs in its own thread and has a dedicated <b>thread pool.</b><br>
 The user can make multiple instances of each component and link them in a way he sees fit.<br>
+Every component instance runs in its own thread and every component type has a dedicated <b>thread pool.</b><br>
 Input components provide input to cruncher components, which then provide input to the output components.<br>
+Component communication (data flow) is based on shared <b>blocking queues</b>. <br>
 The architecture of the system makes it easy to integrate new types of components.<br>
-Components follow the <b>MVC</b> design pattern.<br>
+Components and the main app follow the <b>MVC</b> design pattern.<br>
 
 ![Alt text](images/wdt.png?raw=true "")<br><br><br>
 
@@ -32,3 +33,20 @@ It is also currently computing the sum distribution that the user specified.<br>
 
 ![Alt text](images/de6.png?raw=true "")<br><br>
 In this example the output component is computing the specified distribution sum and is waiting for the final file results to become available to finish.
+
+## Component details:
+Every component instance runs in its own thread and every component type has a dedicated thread pool for completing its main tasks.<br>
+Components communicate among each other using blocking queues. Every component has a blocking queue that its predecessors can write to.<br>
+
+### Input components:
+Every input component can be linked to one or more cruncher component.<br>
+Input components "produce" objects for cruncher's blocking queues, and crunchers "consume" them.<br>
+The main objective of input components is to scan directories for text files, read them and supply crunchers with them.<br>
+Reading of text files is done in a separate task within the input thread pool.<br>
+Input components are tied to a disk (drive) that the user specifies when creating a new instance. <br>
+Only directories on the specified disk can be scanned, and one reading task can be active in the thread pool per disk. <br>
+After one scan cycle is finished, the component pauses for a specified duration (config file). <br>
+The user can manualy pause and resume input components. <br>
+The last modified value of scanned directories is tracked, so if a directory has been modified, it is scanned again. <br>
+
+### Cruncher components:
