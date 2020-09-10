@@ -13,7 +13,7 @@ Every component instance runs in its own thread and every component type has a d
 Input components provide input to cruncher components, which then provide input to the output components.<br>
 Component communication (data flow) is based on shared <b>blocking queues</b>. <br>
 The architecture of the system makes it easy to integrate new types of components.<br>
-Components and the main app follow the <b>MVC</b> design pattern.<br>
+Components and the main app follow the <b>MVC</b> design pattern.<br><br>
 
 ![Alt text](images/wdt.png?raw=true "")<br><br><br>
 
