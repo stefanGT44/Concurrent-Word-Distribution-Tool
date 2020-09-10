@@ -25,7 +25,7 @@ Components and the main app follow the <b>MVC</b> design pattern.<br><br>
 Input 0 is linked to Cruncher 0 which is automatically linked to the default output component.<br>
 Input 0 is active and currently reading one text file (see the blue label).<br>
 Cruncher 0 is currently computing the distribution in three files that Input 0 has provided.<br>
-Cruncher progress can also be monitored in the output component, if an item in the list has a prefix, then results for that file are not ready yet (cruncher still working).
+Cruncher progress can also be monitored in the output component, if an item in the list has a prefix \*, then results for that file are not ready yet (cruncher still working).
 <br><br><br><br>
 
 ![Alt text](images/de5.png?raw=true "")<br><br>
