@@ -16,6 +16,7 @@ The architecture of the system makes it easy to integrate new types of component
 The application is optimized to use as little RAM as possible. <br>
 Components and the main app follow the <b>MVC</b> design pattern.<br><br>
 
+Component pipeline:
 ![Alt text](images/wdt.png?raw=true "")<br><br><br>
 
 ## Usage example
