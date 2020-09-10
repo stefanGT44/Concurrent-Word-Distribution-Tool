@@ -85,7 +85,7 @@ sort_progress_limit=10000 - number of comparrisons after which progress bar is u
 This project was an assignment as a part of the course - Concurrent and Distributed Systems during the 8th semester at the Faculty of Computer Science in Belgrade. All system functionalities were defined in the assignment specifications.
 
 ## Download
-You can download the .jar files [here](download/Concurrent-Keyword-Counter.zip).<br>
+You can download the .jar files [here](download/Concurrent-Distribution-Tool.zip).<br>
 
 ## Contributors
 - Stefan Ginic - <stefangwars@gmail.com>
