@@ -55,7 +55,7 @@ Upon receiving input text, a new <b>RecursiveTask</b> is created within the crun
 The task recursively creates new tasks and splits the job (text) into smaller chunks (chunk size specified in the config file), after which the distribution computation is done, and finally the results are combined.
 Every cunrhcer instance has a specified arity number.<br>
 If arity = <b>1</b> the cruncher counts the number of times every <b>single</b> word appears in a text,<br>
-if arity = 3 the cruncher counts the number of times every 3 consecutive words, in exactly that order, appear in a text , etc.<br>
+if arity = <b>3</b> the cruncher counts the number of times every <b>three</b> consecutive words, in exactly that order, appear in a text , etc.<br>
 
 ### Output components:
 Output components store results provided by the linked crunchers.<br>
