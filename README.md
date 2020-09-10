@@ -8,9 +8,9 @@ There are three types of components:
 2. Cruncher component - data processing
 3. Output component - storing and visualizing results
 
-The user can make multiple instances of each component and link them in a way he sees fit.<br>
+The user can make multiple instances of each component and link (connect) them in a way he sees fit.<br>
 Every component instance runs in its own thread and every component type has a dedicated <b>thread pool.</b><br>
-Input components provide input to cruncher components, which then provide input to the output components.<br>
+Input components provide input to cruncher components, which provide input to the output components.<br>
 Component communication (data flow) is based on shared <b>blocking queues</b>. <br>
 The architecture of the system makes it easy to integrate new types of components.<br>
 The application is optimized to use as little RAM as possible. <br>
