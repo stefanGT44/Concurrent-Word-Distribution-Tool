@@ -46,7 +46,7 @@ Reading of text files is done in a separate task within the input thread pool.<b
 Input components are tied to a disk (drive) that the user specifies when creating a new instance. <br>
 Only directories on the specified disk can be scanned, and only one reading task can be active in the thread pool per disk. <br>
 After one scan cycle is finished, the component pauses for a certain duration before the next cycle (specified in the config file). <br>
-The user can manualy pause and resume input components. <br>
+The user can manually pause and resume input components. <br>
 The last modified value of scanned directories is tracked, so if a directory has been modified, it is scanned again (the text files are read again). <br>
 
 ### Cruncher components:
@@ -54,7 +54,7 @@ In the current implementation, cruncher components are automatically linked to o
 The main objective of cruncher components is to count the word distribution in text objects that linked input components provided, and supply linked output components with the results. <br>
 Upon receiving input text, a new <b>RecursiveTask</b> is created within the cruncher <b>thread pool</b> and the <b>Future</b> object is forwarded to all linked output components.<br>
 The task recursively creates new tasks and splits the job (text) into smaller chunks (chunk size specified in the config file), after which the distribution computation is done, and finally the results are combined.
-Every cunrhcer instance has a specified arity number.<br>
+Every cruncher instance has a specified arity number.<br>
 If arity = <b>1</b> the cruncher counts the number of times every <b>single</b> word appears in a text,<br>
 if arity = <b>3</b> the cruncher counts the number of times every <b>three</b> consecutive words, in exactly that order, appear in a text , etc.<br>
 
@@ -79,7 +79,7 @@ File structure: <br><br>
 file_input_sleep_time=5000 - pause duration for the input component <br>
 disks=data/disk1/;data/disk2 - list of disks for the input component <br>
 counter_data_limit=10000000 - job limit for counting tasks given in characters <br>
-sort_progress_limit=10000 - number of comparrisons after which progress bar is updated during sorting <br><br>
+sort_progress_limit=10000 - number of comparisons after which progress bar is updated during sorting <br><br>
 
 ## Sidenote
 This project was an assignment as a part of the course - Concurrent and Distributed Systems during the 8th semester at the Faculty of Computer Science in Belgrade. All system functionalities were defined in the assignment specifications.
