@@ -2,7 +2,7 @@
 A JavaFX desktop application for concurrently computing the distribution of specified words in large directories/files and plotting the results on a graph. (Distribution - the number of times each word appears in a text file)
 
 ## Overview
-The application functions as a pipeline that consists of several types of components that are working concurrently in conjunction.<br>
+The application functions as a <b>pipeline</b> that consists of several types of <b>components</b> that are working <b>concurrently in conjunction</b>.<br>
 There are three types of components:
 1. Input component - data entry point
 2. Cruncher component - data processing
